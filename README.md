@@ -23,3 +23,6 @@ Run in the repository folder:
 ## Windows
 
 <code>python3 inmerse.py</code>
+
+## TODO:
+- Ensure the language is mathing in the input and in the output.
