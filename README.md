@@ -1,5 +1,5 @@
 # InmerseAI
-Inmerse AI chatbot terminal port 
+Inmerse AI chatbot terminal port for Inmers 
 
 # Set up dependencies:
 - Install Mozilla Firefox
