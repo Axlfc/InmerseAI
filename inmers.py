@@ -38,7 +38,7 @@ except:
 
 
 # Load the Inmers web app
-driver.get("https://inmers.com")
+driver.get("https://inmers.com/app")
 
 # Wait for the page to load
 time.sleep(4)
