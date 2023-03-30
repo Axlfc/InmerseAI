@@ -25,4 +25,4 @@ Run in the repository folder:
 <code>python3 inmerse.py</code>
 
 ## TODO:
-- Ensure the language is mathing in the input and in the output.
+- Ensure the language is matching in the input and in the output.
