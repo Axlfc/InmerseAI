@@ -78,10 +78,10 @@ def inmers():
 
             input_box.send_keys(message + Keys.RETURN)
 
-            time.sleep(8)
+            time.sleep(20)
 
             # Wait for the bot to respond
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'span.mwai-text p')))
+            WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'span.mwai-text p')))
             all_responses = driver.find_elements(By.CSS_SELECTOR, 'div.mwai-reply')
 
             bot_text_responses = []
@@ -95,8 +95,8 @@ def inmers():
             if bot_text_responses[index] == "":
                 pass
             else:
-                add_message(bot_text_responses[index].strip("Inmers\n"), initial_time)
-                print(colorama.Fore.GREEN + bot_text_responses[index].strip("Inmers\n"))
+                add_message(bot_text_responses[index].strip("Inmers:\n"), initial_time)
+                print(colorama.Fore.GREEN + "\n" + bot_text_responses[index].strip("Inmers:\n"))
                 print(colorama.Fore.RESET)
         except:
             print("CLOSING...")
