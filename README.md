@@ -24,5 +24,25 @@ Run in the repository folder:
 
 <code>python inmerse.py</code>
 
-## TODO:
-- Ensure the language is matching in the input and in the output.
+# Inmers_talk
+
+## Windows
+
+<code>pip install gtts pipwin</code>
+<code>pipwin install pyaudio</code>
+
+## GNU/Linux
+
+<code>sudo apt-get install -y libasound-dev portaudio19-dev ffmpeg</code>
+<code>pip3 install gtts pyaudio</code>
+
+# Usage:
+Run in the repository folder:
+
+## GNU/Linux
+
+<code>python3 inmerse_talk.py</code>
+
+## Windows
+
+<code>python inmerse_talk.py</code>
