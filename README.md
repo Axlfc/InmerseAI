@@ -8,21 +8,21 @@ Inmerse AI chatbot terminal port for Inmers
 
 ## GNU/Linux
 
-<code>pip3 install colorama python-dotenv selenium</code>
+<code>pip3 install colorama python-dotenv selenium langdetect googletrans==4.0.0-rc1</code>
 
 ## Windows
-<code>pip install colorama python-dotenv selenium</code>
+<code>pip install colorama python-dotenv selenium langdetect googletrans==4.0.0-rc1</code>
 
 # Usage:
 Run in the repository folder:
 
 ## GNU/Linux
 
-<code>python inmerse.py</code>
+<code>python3 inmerse.py</code>
 
 ## Windows
 
-<code>python3 inmerse.py</code>
+<code>python inmerse.py</code>
 
 ## TODO:
 - Ensure the language is matching in the input and in the output.

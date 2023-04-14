@@ -78,7 +78,7 @@ def inmers_chat(message, initial_time):
         input_box.send_keys(message + Keys.RETURN)
 
         time.sleep(20)
-        
+
         # Wait for the bot to respond
         WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'span.mwai-text p')))
         all_responses = driver.find_elements(By.CSS_SELECTOR, 'div.mwai-reply')
