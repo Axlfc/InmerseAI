@@ -46,3 +46,6 @@ Run in the repository folder:
 ## Windows
 
 <code>python inmerse_talk.py</code>
+
+## TODO:
+- [ ] Get rid of ugly output from ALSA lib.
