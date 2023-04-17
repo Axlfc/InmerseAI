@@ -105,6 +105,8 @@ def inmers_chat(message, initial_time):
                 add_message(bot_response, initial_time)
                 print(colorama.Fore.GREEN + "\n" + bot_response)
                 print(colorama.Fore.RESET)
+        if bot_response:
+            return bot_response
     except Exception as e:
         print("Exception", repr(e))
         print("CLOSING...")

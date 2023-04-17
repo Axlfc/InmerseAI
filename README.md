@@ -47,5 +47,24 @@ Run in the repository folder:
 
 <code>python inmerse_talk.py</code>
 
+
+# Telegram bot:
+
+#### Get Your Bot Token
+
+- Search for @botfather in Telegram.
+- Start a conversation with BotFather by clicking on the Start button.
+- Type /newbot, and follow the prompts to set up a new bot. The BotFather will give you a token that you will use to authenticate your bot and grant it access to the Telegram API.
+- Edit the `.env` file of this repository and set the `TELEGRAM_BOT_TOKEN=` variable to your token.
+
+
+## Install python dependencies
+
+<code>pip install python-dotenv pyTelegramBotAPI</code>
+
+## Start telegram bot:
+
+<code>python main.py</code>
+
 ## TODO:
 - [ ] Get rid of ugly output from ALSA lib.
