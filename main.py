@@ -439,7 +439,7 @@ def handle_slap_command(message):
         to_user = re.findall('@\w+', message.text)[0]
         # Call the slap API and get a random slap message
         slap_data = requests.get("https://axljuega.github.io/data/slap_data.txt").text
-        slap_message = random.choice(slap_data.split('\n'))[1:-3]
+        slap_message = random.choice(slap_data.split('\n'))[1:-2]
         # Format the slap message with the usernames
         response = f"{from_user} ha abofeteado a {to_user} con {slap_message}."
         # Send the response as a message to the chat
