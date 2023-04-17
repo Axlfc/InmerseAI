@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service
 import lang_detect
 import translator
+import yaml
 
 os.environ['MOZ_HEADLESS'] = '1'
 
@@ -46,6 +47,24 @@ driver.get("https://inmers.com/app")
 time.sleep(4)
 
 
+def set_character_context(character_name):
+    # Read the context information from the character file
+    character_filename = character_name + ".yaml"
+    character_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "characters", character_filename)
+    with open(character_file, "r") as f:
+        character_data = yaml.safe_load(f)
+    context = character_data["context"]
+
+    # Send the context information as the first message to the bot
+    input_box = driver.find_element(By.CSS_SELECTOR, 'textarea')
+    input_box.send_keys(context + Keys.RETURN)
+    # add_message(context, initial_time)
+
+
+set_character_context("UnAI")
+time.sleep(15)
+
+
 def add_message(message, initialtime):
     now = datetime.now()
     time = now.strftime("%H-%M-%S")
@@ -68,6 +87,21 @@ def add_message(message, initialtime):
 
 def inmers_chat(message, initial_time):
     try:
+        # Read the context information from the character file
+        character_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "characters", "UnAI.yaml")
+        with open(character_file, "r") as f:
+            character_data = yaml.safe_load(f)
+        context = character_data["context"]
+
+        # Send the context information as the first message to the bot
+        input_box = driver.find_element(By.CSS_SELECTOR, 'textarea')
+        input_box.send_keys(context + Keys.RETURN)
+        # add_message(context, initial_time)
+
+        # Wait for the bot to respond and ignore its response
+        time.sleep(20)
+        WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'span.mwai-text p')))
+
         input_box = driver.find_element(By.CSS_SELECTOR, 'textarea')
         message_lang = lang_detect.detect_language(message)
         add_message(message, initial_time)
